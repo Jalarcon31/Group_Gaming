@@ -1,0 +1,442 @@
+/* General */
+body {
+    background-color: #798ADB;
+    margin: 0;
+    font-family: 'Doto', sans-serif;
+    text-align: center;
+}
+
+/* Sección 1: Logo */
+#logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.logo-box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+#logo-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Sección 2: Título y descripción */
+#title-section {
+    color: white;
+    padding: 30px;
+}
+
+#main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: colorChange 2s infinite;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+}
+
+#description p {
+    font-family: serif;
+    font-size: 1.2rem;
+    margin: 20px auto;
+}
+
+/* Animación de texto */
+@keyframes colorChange {
+    0% { color: #ff0000; }
+    50% { color: #00ff00; }
+    100% { color: #0000ff; }
+}
+
+/* Sección 3: Integrantes */
+#members-section {
+    padding: 50px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Si deseas mantener la apariencia circular de las imágenes */
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member h3 {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 100px;
+    }
+
+    .circle img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle h3 {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Sección 4: Redes Sociales */
+#socials-section {
+    padding: 30px;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.social img {
+    width: 50px;
+    height: 50px;
+}
+
+#follow-box {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: white;
+    animation: colorChange 2s infinite;
+}
+
+/* Sección 5: Mini logo y matriz */
+#matrix-section {
+    padding: 30px;
+}
+
+#mini-logo-box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+#matrix-box {
+    font-family: monospace;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*
+
+/* General 
+body {
+    margin: 0;
+    font-family: serif;
+    background-color: #798ADB;
+}
+
+/* Estilo de las secciones 
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid #fff;
+}
+
+/* Primer cuadro: Imagen principal 
+#logo-section {
+    height: 300px;
+    background-color: #5A6DAA;
+}
+
+#main-image {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Segundo cuadro: Título y descripción 
+#title-section {
+    text-align: center;
+    background-color: #6C84C1;
+}
+
+.namepag {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    animation: colorChange 2s infinite;
+    font-family: Doto;
+}
+
+.description {
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.images img {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+}
+
+/* Tercer cuadro: Integrantes 
+#integr-section {
+    background-color: #546AA2;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Redes sociales 
+#socials-section {
+    background-color: #687BC0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.social img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hacer los íconos circulares 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Agregar efecto brillante 
+}
+
+.social a {
+    display: inline-block;
+}
+
+/* Caja de FOLLOW 
+#follow-box {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #ff00ff, 
+        0 0 20px #00ffff, 
+        0 0 40px #ff00ff;
+    animation: colorChange 2s infinite;
+    font-family: 'Doto', sans-serif;
+}
+
+/* Animación de cambio de color 
+@keyframes colorChange {
+    0% { color: #ff0000; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+    25% { color: #00ff00; text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; }
+    50% { color: #0000ff; text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff; }
+    75% { color: #ffff00; text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00; }
+    100% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+}
+
+
+
+/* Quinto cuadro: Matrix 
+#matrix-section {
+    background-color: #444B78;
+    color: #0f0;
+    font-family: monospace;
+    text-align: center;
+}
+
+#matrix-logo {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+#matrix-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Animación del título 
+@keyframes colorChange {
+    0%, 100% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ffff00; }
+}
+@font-face {
+    font-family: Doto;
+    src: url("Doto-VariableFont_ROND,wght.ttf");
+}
+
+*/
+
+/* Ajustar el diseño del body 
+body {
+    background-color: #798ADB;
+    margin: 0;
+}
+
+#title {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Doto;
+}
+
+.namepag {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #ff00ff, 
+        0 0 20px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 80px #ff00ff;
+    animation: colorChange 2s infinite;
+}
+
+
+#integr {
+    margin-top: 50px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+
+#integr h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 10px 0;
+}
+
+
+@keyframes colorChange {
+    0% {
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+    }
+    25% {
+        color: #00ff00;
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+    }
+    50% {
+        color: #0000ff;
+        text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 40px #0000ff, 0 0 80px #0000ff;
+    }
+    75% {
+        color: #ffff00;
+        text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 80px #ffff00;
+    }
+    100% {
+        color: #ff00ff;
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+#integr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+#integr div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#integr img {
+    margin-left: 10px;
+    border-radius: 50%; 
+    border: 2px solid #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 50px; 
+    height: 50px;
+}
+
+@font-face {
+    font-family: Doto;
+    src: url("Doto-VariableFont_ROND,wght.ttf");
+}
+*/
